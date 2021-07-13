@@ -31,7 +31,7 @@
 	<properties>
 		<!-- project version -->
 		<revision>1.0.0-RC1</revision>
-		<java.version>11</java.version>
+		<java.version>12</java.version>
 	</properties>
 
 	<!-- ........................................................................................................... -->
@@ -87,8 +87,8 @@
 						</path>
 						**
 					</annotationProcessorPaths>
-					<source>11</source>
-					<target>11</target>
+					<source>12</source>
+					<target>12</target>
 				</configuration>
 			</plugin>
 
