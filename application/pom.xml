@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- ........................................................................................................... -->
+    <!-- Parent metadata -->
+    <!-- ........................................................................................................... -->
+
+    <parent>
+        <artifactId>subsequences-challenge</artifactId>
+        <groupId>com.appgate</groupId>
+        <version>${revision}</version>
+    </parent>
+
+    <!-- ........................................................................................................... -->
+    <!-- Parent metadata -->
+    <!-- ........................................................................................................... -->
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>application</artifactId>
+    <packaging>pom</packaging>
+
+    <properties>
+        <!-- Scalatest properties -->
+        <scala.version>2.12.8</scala.version>
+        <scalatest.version>3.0.8</scalatest.version>
+        <scalatest.plugin.version>1.0</scalatest.plugin.version>
+
+        <!-- Sonar properties -->
+        <sonar.coverage.exclusions>
+            **/com/appgate/subsequences/configuration/**/*
+        </sonar.coverage.exclusions>
+    </properties>
+
+    <!-- ........................................................................................................... -->
+    <!-- Parent metadata -->
+    <!-- ........................................................................................................... -->
+
+    <modules>
+        <module>core</module>
+        <module>entry-points</module>
+        <module>configuration</module>
+        <module>infrastucture</module>
+    </modules>
+
+    <!-- ........................................................................................................... -->
+    <!-- Project Dependencies -->
+    <!-- ........................................................................................................... -->
+
+    <dependencies>
+        <!-- Scala test -->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest_2.12</artifactId>
+            <version>${scalatest.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.easymock</groupId>
+            <artifactId>easymock</artifactId>
+            <version>4.0.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scalacheck</groupId>
+            <artifactId>scalacheck_2.12</artifactId>
+            <version>1.14.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
