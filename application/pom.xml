@@ -41,7 +41,7 @@
         <module>core</module>
         <module>entry-points</module>
         <module>configuration</module>
-        <module>infrastucture</module>
+        <module>infrastructure</module>
     </modules>
 
     <!-- ........................................................................................................... -->

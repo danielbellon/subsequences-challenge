@@ -24,7 +24,7 @@ application/            the application source code
 |- core/                the layer with the pure application logic
 |  |- domain/           the bussiness models               
 |  +- usecase/          the logic implementation for the application use cases
-|- data-provider/       all the components in charge of retrieve and store information
+|- infrastructure/      all the components in charge of retrieve and store information
 +- entry-point/         acces to the application (REST controllers)
 deployment/             the definition of the build and deployment pipelines
 documentation/          documentation resources as diagrams
