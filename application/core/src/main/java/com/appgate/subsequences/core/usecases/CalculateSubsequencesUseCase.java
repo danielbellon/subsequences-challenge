@@ -1,17 +1,22 @@
 package com.appgate.subsequences.core.usecases;
 
-import com.appgate.subsequences.core.domain.CalculateSubsequencesCommand;
-
-import java.util.Optional;
+import com.appgate.subsequences.core.domain.command.CalculateSubsequencesCommand;
+import com.appgate.subsequences.core.domain.service.SubsequenceCalculator;
+import lombok.RequiredArgsConstructor;
 
 /**
  * @author <a href="mailto:danielbellon77@gmail.com"> Daniel Bellón </a>
  * @since 1.0.0
  */
+@RequiredArgsConstructor
 public class CalculateSubsequencesUseCase {
 
-	public Optional<String> execute(CalculateSubsequencesCommand command) {
+	private final SubsequenceCalculator calculator;
 
-		return Optional.empty();
+	public int execute(CalculateSubsequencesCommand command) {
+
+		return command.isValid() ?
+			   calculator.getSubsequences(command.getBase(), command.getTarget()) :
+			   0;
 	}
 }
