@@ -4,8 +4,8 @@ import com.appgate.subsequences.core.domain.model.KnapsackAlgorithm;
 import lombok.Data;
 
 /**
- * @author <a href="mailto:daniel.bellon@payulatam.com"> Daniel Bellón </a>
- * @since
+ * @author <a href="mailto:danielbellon77@gmail.com"> Daniel Bellón </a>
+ * @since 1.0.0
  */
 @Data
 public class KnapsackCalculator implements SubsequenceCalculator {

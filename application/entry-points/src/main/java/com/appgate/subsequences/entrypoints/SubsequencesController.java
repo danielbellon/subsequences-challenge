@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -20,8 +21,12 @@ public class SubsequencesController {
 	private final CalculateSubsequencesUseCase useCase;
 
 	@GetMapping("/count")
-	public ResponseEntity<Integer> getCount(final String base, final String target) {
+	public ResponseEntity<Integer> getCount(
+			@RequestParam(value = "string") final String base,
+			@RequestParam(value = "target") final String target) {
 
-		return ResponseEntity.ok(useCase.execute(new CalculateSubsequencesCommand(base, target)));
+		var command = new CalculateSubsequencesCommand(base, target);
+		var count = useCase.execute(command);
+		return ResponseEntity.ok(count);
 	}
 }

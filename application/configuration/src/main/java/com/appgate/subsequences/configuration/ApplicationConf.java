@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author <a href="mailto:daniel.bellon@payulatam.com"> Daniel Bellón </a>
+ * @author <a href="mailto:danielbellon77@gmail.com"> Daniel Bellón </a>
  * @since 1.0.0
  */
 @Configuration
