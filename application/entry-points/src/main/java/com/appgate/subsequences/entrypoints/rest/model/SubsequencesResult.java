@@ -1,7 +1,8 @@
 package com.appgate.subsequences.entrypoints.rest.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
@@ -9,7 +10,8 @@ import lombok.ToString;
  * @since 1.0.0
  */
 @ToString
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder(setterPrefix = "with")
 public class SubsequencesResult {
 
